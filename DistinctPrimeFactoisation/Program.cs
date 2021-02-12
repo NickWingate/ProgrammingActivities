@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace DistinctPrimeFactoisation
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -14,7 +14,7 @@ namespace DistinctPrimeFactoisation
             int sum = Sum(factors);
         }
 
-        private static int Sum(List<int> numbers)
+        public static int Sum(List<int> numbers)
         {
             int total = 0;
             foreach (int num in numbers)
