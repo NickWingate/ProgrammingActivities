@@ -13,6 +13,9 @@ namespace DistinctPrimeFactorisation.Test
         [TestCase(9, false)]
         [TestCase(15, false)]
         [TestCase(4, false)]
+        [TestCase(0, false)]
+        [TestCase(1, false)]
+        [TestCase(2, true)]
         public void IsPrime(int input, bool result)
         {
             Assert.AreEqual(result, Program.IsPrime(input));

@@ -53,8 +53,14 @@ namespace DistinctPrimeFactoisation
             return collection;
         }
 
+        public static List<int> FindPrimeFactors(int number)
+        {
+            List<int> initialFactors = FindFactors(number);
+            throw new NotImplementedException();
+        }
+
         /// <summary>
-        /// Factorises a number to its prime factors, if the number is prime it is returned
+        /// Factorises a number to its factors, if the number is prime it is returned
         /// </summary>
         /// <param name="number"></param>
         /// <returns></returns>
@@ -77,6 +83,10 @@ namespace DistinctPrimeFactoisation
 
         public static bool IsPrime(int number)
         {
+            if (number < 2)
+            {
+                return false;
+            }
             for (int i = 2; i <= number / 2; i++)
             {
                 if (number % i == 0)
