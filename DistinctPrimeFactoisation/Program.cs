@@ -75,9 +75,16 @@ namespace DistinctPrimeFactoisation
             return factors;
         }
 
-        public bool IsPrime(int number)
+        public static bool IsPrime(int number)
         {
-            throw new NotImplementedException();
+            for (int i = 2; i <= number / 2; i++)
+            {
+                if (number % i == 0)
+                {
+                    return false;
+                }
+            }
+            return true;
         }
     }
 }

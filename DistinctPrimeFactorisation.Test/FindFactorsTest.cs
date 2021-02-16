@@ -28,6 +28,7 @@ namespace DistinctPrimeFactorisation.Test
 
         [TestCase(20, new int[] { 2,4,5,10 })]
         [TestCase(12, new int[] { 2,3,4,6 })]
+        [TestCase(100, new int[] { 2,4,5,10,20,25,50 })]
         public void FactoriseNumbersWithNonPrimeFactors(int input, int[] result)
         {
             Assert.AreEqual(new List<int>(result), Program.FindFactors(input));
