@@ -1,17 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
+using System.Linq;
 
-namespace DistinctPrimeFactoisation
+namespace DistinctPrimeFactorisation
 {
-    public class Program
+    public static class Program
     {
         static void Main(string[] args)
         {
             Console.Write("Enter Number:");
             int number = Convert.ToInt32(Console.ReadLine());
-            List<int> factors = FindFactors(number);
+            List<int> factors = FindPrimeFactors(number);
             factors = RemoveDuplicates(factors);
-            int sum = Sum(factors);
+            Console.WriteLine(Product(factors));
         }
 
         /// <summary>
@@ -25,6 +27,21 @@ namespace DistinctPrimeFactoisation
             foreach (int num in numbers)
             {
                 total += num;
+            }
+            return total;
+        }
+
+        /// <summary>
+        /// Gets the product of a collection of numbers, O(n)
+        /// </summary>
+        /// <param name="numbers"></param>
+        /// <returns></returns>
+        public static int Product(IEnumerable<int> numbers)
+        {
+            int total = 1;
+            foreach (int number in numbers)
+            {
+                total *= number;
             }
             return total;
         }
@@ -55,8 +72,18 @@ namespace DistinctPrimeFactoisation
 
         public static List<int> FindPrimeFactors(int number)
         {
-            List<int> initialFactors = FindFactors(number);
-            throw new NotImplementedException();
+            List<int> primeFactors = new List<int>();
+
+            for (int i = 2; i <= number; i++)
+            {
+                while (number % i == 0)
+                {
+                    primeFactors.Add(i);
+                    number /= i;
+                }
+            }
+
+            return primeFactors;
         }
 
         /// <summary>
@@ -81,7 +108,7 @@ namespace DistinctPrimeFactoisation
             return factors;
         }
 
-        public static bool IsPrime(int number)
+        public static bool IsPrime(this int number)
         {
             if (number < 2)
             {
