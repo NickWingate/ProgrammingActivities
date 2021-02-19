@@ -17,21 +17,6 @@ namespace DistinctPrimeFactorisation
         }
 
         /// <summary>
-        /// Sums a collection of numbers, O(n) time
-        /// </summary>
-        /// <param name="numbers"></param>
-        /// <returns></returns>
-        public static int Sum(IEnumerable<int> numbers)
-        {
-            int total = 0;
-            foreach (int num in numbers)
-            {
-                total += num;
-            }
-            return total;
-        }
-
-        /// <summary>
         /// Gets the product of a collection of numbers, O(n)
         /// </summary>
         /// <param name="numbers"></param>
@@ -69,7 +54,12 @@ namespace DistinctPrimeFactorisation
             }
             return collection;
         }
-
+        
+        /// <summary>
+        /// Finds all prime factors of a number (with duplicates)
+        /// </summary>
+        /// <param name="number"></param>
+        /// <returns></returns>
         public static List<int> FindPrimeFactors(int number)
         {
             List<int> primeFactors = new List<int>();
@@ -84,44 +74,6 @@ namespace DistinctPrimeFactorisation
             }
 
             return primeFactors;
-        }
-
-        /// <summary>
-        /// Factorises a number to its factors, if the number is prime it is returned
-        /// </summary>
-        /// <param name="number"></param>
-        /// <returns></returns>
-        public static List<int> FindFactors(int number)
-        {
-            List<int> factors = new List<int>();
-            for (int i = 2; i <= number / 2; i++)
-            {
-                if (number % i == 0)
-                {
-                    factors.Add(i);
-                }
-            }
-            if (factors.Count == 0)
-            {
-                factors.Add(number);
-            }
-            return factors;
-        }
-
-        public static bool IsPrime(this int number)
-        {
-            if (number < 2)
-            {
-                return false;
-            }
-            for (int i = 2; i <= number / 2; i++)
-            {
-                if (number % i == 0)
-                {
-                    return false;
-                }
-            }
-            return true;
         }
     }
 }
