@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistinctPrimeFactorisation"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistinctPrimeFactorisation.Test", "DistinctPrimeFactorisation.Test\DistinctPrimeFactorisation.Test.csproj", "{DD05983D-4CCA-4E87-8FE2-89DCAE1F3DE1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FibonacciLetters", "FibonacciLetters\FibonacciLetters.csproj", "{B99EDDBF-8AFE-4612-AA4F-D60531E98681}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{DD05983D-4CCA-4E87-8FE2-89DCAE1F3DE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD05983D-4CCA-4E87-8FE2-89DCAE1F3DE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD05983D-4CCA-4E87-8FE2-89DCAE1F3DE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B99EDDBF-8AFE-4612-AA4F-D60531E98681}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B99EDDBF-8AFE-4612-AA4F-D60531E98681}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B99EDDBF-8AFE-4612-AA4F-D60531E98681}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B99EDDBF-8AFE-4612-AA4F-D60531E98681}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
