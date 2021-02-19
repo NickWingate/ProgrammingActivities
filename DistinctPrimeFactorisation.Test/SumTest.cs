@@ -1,4 +1,4 @@
-﻿using DistinctPrimeFactoisation;
+﻿using DistinctPrimeFactorisation;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
